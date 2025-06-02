@@ -8,12 +8,12 @@ func main() {
 
 	go subscribe(ready)
 
-	// Esperamos a que subscribe() esté listo
+	// Esperamos a que subscribe() esté listo.
 	<-ready
 
 	go publish()
 
-	// Le damos tiempo para recibir mensajes
+	// Le damos tiempo para recibir mensajes.
 	time.Sleep(3 * time.Second)
 
 }

@@ -14,7 +14,7 @@ func subscribe(ready chan bool) {
 
 	sub, _ := nc.SubscribeSync("msg.test")
 
-	// Avisamos que la suscripción está lista
+	// Avisamos que la suscripción está lista.
 	ready <- true
 
 	m, err := sub.NextMsg(3 * time.Second)
